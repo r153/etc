@@ -1,0 +1,269 @@
+#begin
+$a1								=$a1
+$abcd							=$abcd
+$Z0								=$Z0
+$Zbcd							=$Zbcd
+$a1.a1							=$a1.a1
+$abcd.abcd						=$abcd.abcd
+$Z0.Z0							=$Z0.Z0
+$Zbcd.Zbcd						=$Zbcd.Zbcd
+$Zbcd.a1()						=$Zbcd.a1()
+$Zbcd.a1(1)						=$Zbcd.a1(1)
+$Zbcd.a1($a1)					=$Zbcd.a1($a1)
+$Zbcd.a1($a1.a1)				=$Zbcd.a1($a1.a1)
+$Zbcd.a1($a1.a1(1))				=$Zbcd.a1($a1.a1(1))
+$Zbcd.a1($a1.a1(1),$a1.a1(1))	=$Zbcd.a1($a1.a1(1),$a1.a1(1))
+
+$a1								
+!$abcd							
+!$Z0							
+!$Zbcd							
+!$a1.a1							
+!$abcd.abcd						
+!$Z0.Z0							
+!$Zbcd.Zbcd						
+!$Zbcd.a1()						
+!$Zbcd.a1(1)					
+!$Zbcd.a1($a1)					
+!$Zbcd.a1($a1.a1)				
+!$Zbcd.a1($a1.a1(1))			
+!$Zbcd.a1($a1.a1(1),$a1.a1(1))	
+
+$a1								*$a1								
+$abcd							*$abcd							
+$Z0								*$Z0								
+$Zbcd							*$Zbcd							
+$a1.a1							*$a1.a1							
+$abcd.abcd						*$abcd.abcd						
+$Z0.Z0							*$Z0.Z0							
+$Zbcd.Zbcd						*$Zbcd.Zbcd						
+$Zbcd.a1()						*$Zbcd.a1()						
+$Zbcd.a1(1)						*$Zbcd.a1(1)						
+$Zbcd.a1($a1)					*$Zbcd.a1($a1)					
+$Zbcd.a1($a1.a1)				*$Zbcd.a1($a1.a1)				
+$Zbcd.a1($a1.a1(1))				*$Zbcd.a1($a1.a1(1))				
+$Zbcd.a1($a1.a1(1),$a1.a1(1))	*$Zbcd.a1($a1.a1(1),$a1.a1(1))	
+
+$a1								/$a1								
+$abcd							/$abcd							
+$Z0								/$Z0								
+$Zbcd							/$Zbcd							
+$a1.a1							/$a1.a1							
+$abcd.abcd						/$abcd.abcd						
+$Z0.Z0							/$Z0.Z0							
+$Zbcd.Zbcd						/$Zbcd.Zbcd						
+$Zbcd.a1()						/$Zbcd.a1()						
+$Zbcd.a1(1)						/$Zbcd.a1(1)						
+$Zbcd.a1($a1)					/$Zbcd.a1($a1)					
+$Zbcd.a1($a1.a1)				/$Zbcd.a1($a1.a1)				
+$Zbcd.a1($a1.a1(1))				/$Zbcd.a1($a1.a1(1))				
+$Zbcd.a1($a1.a1(1),$a1.a1(1))	/$Zbcd.a1($a1.a1(1),$a1.a1(1))	
+
+$a1								%$a1								
+$abcd							%$abcd							
+$Z0								%$Z0								
+$Zbcd							%$Zbcd							
+$a1.a1							%$a1.a1							
+$abcd.abcd						%$abcd.abcd						
+$Z0.Z0							%$Z0.Z0							
+$Zbcd.Zbcd						%$Zbcd.Zbcd						
+$Zbcd.a1()						%$Zbcd.a1()						
+$Zbcd.a1(1)						%$Zbcd.a1(1)						
+$Zbcd.a1($a1)					%$Zbcd.a1($a1)					
+$Zbcd.a1($a1.a1)				%$Zbcd.a1($a1.a1)				
+$Zbcd.a1($a1.a1(1))				%$Zbcd.a1($a1.a1(1))				
+$Zbcd.a1($a1.a1(1),$a1.a1(1))	%$Zbcd.a1($a1.a1(1),$a1.a1(1))	
+
+
+
+!$a1*$a1								
+!$abcd							*$abcd							
+!$Z0								*$Z0								
+!$Zbcd							*$Zbcd							
+!$a1.a1							*$a1.a1							
+!$abcd.abcd						*$abcd.abcd						
+!$Z0.Z0							*$Z0.Z0							
+!$Zbcd.Zbcd						*$Zbcd.Zbcd						
+!$Zbcd.a1()						*$Zbcd.a1()						
+!$Zbcd.a1(1)						*$Zbcd.a1(1)						
+!$Zbcd.a1($a1)					*$Zbcd.a1($a1)					
+!$Zbcd.a1($a1.a1)				*$Zbcd.a1($a1.a1)				
+!$Zbcd.a1($a1.a1(1))				*$Zbcd.a1($a1.a1(1))				
+!$Zbcd.a1($a1.a1(1),$a1.a1(1))	*$Zbcd.a1($a1.a1(1),$a1.a1(1))	
+
+!$a1							/$a1								
+!$abcd							/$abcd							
+!$Z0							/$Z0								
+!$Zbcd							/$Zbcd							
+!$a1.a1							/$a1.a1							
+!$abcd.abcd						/$abcd.abcd						
+!$Z0.Z0							/$Z0.Z0							
+!$Zbcd.Zbcd						/$Zbcd.Zbcd						
+!$Zbcd.a1()						/$Zbcd.a1()						
+!$Zbcd.a1(1)						/$Zbcd.a1(1)						
+!$Zbcd.a1($a1)					/$Zbcd.a1($a1)					
+!$Zbcd.a1($a1.a1)				/$Zbcd.a1($a1.a1)				
+!$Zbcd.a1($a1.a1(1))				/$Zbcd.a1($a1.a1(1))				
+!$Zbcd.a1($a1.a1(1),$a1.a1(1))	/$Zbcd.a1($a1.a1(1),$a1.a1(1))	
+
+!$a1%$a1								
+!$abcd							%$abcd							
+!$Z0								%$Z0								
+!$Zbcd							%$Zbcd							
+!$a1.a1							%$a1.a1							
+!$abcd.abcd						%$abcd.abcd						
+!$Z0.Z0							%$Z0.Z0							
+!$Zbcd.Zbcd						%$Zbcd.Zbcd						
+!$Zbcd.a1()						%$Zbcd.a1()						
+!$Zbcd.a1(1)						%$Zbcd.a1(1)						
+!$Zbcd.a1($a1)					%$Zbcd.a1($a1)					
+!$Zbcd.a1($a1.a1)				%$Zbcd.a1($a1.a1)				
+!$Zbcd.a1($a1.a1(1))				%$Zbcd.a1($a1.a1(1))				
+!$Zbcd.a1($a1.a1(1),$a1.a1(1))%$Zbcd.a1($a1.a1(1),$a1.a1(1))	
+
+
+$a1%$a1								
+$abcd							+$abcd							*$abcd							
+$Z0								+$Z0							*$Z0							
+$Zbcd							+$Zbcd							*$Zbcd							
+$a1.a1							+$a1.a1							*$a1.a1							
+$abcd.abcd						+$abcd.abcd						*$abcd.abcd						
+$Z0.Z0							+$Z0.Z0							*$Z0.Z0							
+$Zbcd.Zbcd						+$Zbcd.Zbcd						*$Zbcd.Zbcd						
+$Zbcd.a1()						+$Zbcd.a1()						*$Zbcd.a1()						
+$Zbcd.a1(1)						+$Zbcd.a1(1)					*$Zbcd.a1(1)					
+$Zbcd.a1($a1)					+$Zbcd.a1($a1)					*$Zbcd.a1($a1)					
+$Zbcd.a1($a1.a1)				+$Zbcd.a1($a1.a1)				*$Zbcd.a1($a1.a1)				
+$Zbcd.a1($a1.a1(1))				+$Zbcd.a1($a1.a1(1))			*$Zbcd.a1($a1.a1(1))			
+$Zbcd.a1($a1.a1(1),$a1.a1(1))	+$Zbcd.a1($a1.a1(1),$a1.a1(1))	*$Zbcd.a1($a1.a1(1),$a1.a1(1))	
+
+!$a1%$a1								
+!$abcd							-$abcd							%$abcd							
+!$Z0							-$Z0							%$Z0							
+!$Zbcd							-$Zbcd							%$Zbcd							
+!$a1.a1							-$a1.a1							%$a1.a1							
+!$abcd.abcd						-$abcd.abcd						%$abcd.abcd						
+!$Z0.Z0							-$Z0.Z0							%$Z0.Z0							
+!$Zbcd.Zbcd						-$Zbcd.Zbcd						%$Zbcd.Zbcd						
+!$Zbcd.a1()						-$Zbcd.a1()						%$Zbcd.a1()						
+!$Zbcd.a1(1)					-$Zbcd.a1(1)					%$Zbcd.a1(1)					
+!$Zbcd.a1($a1)					-$Zbcd.a1($a1)					%$Zbcd.a1($a1)					
+!$Zbcd.a1($a1.a1)				-$Zbcd.a1($a1.a1)				%$Zbcd.a1($a1.a1)				
+!$Zbcd.a1($a1.a1(1))			-$Zbcd.a1($a1.a1(1))			%$Zbcd.a1($a1.a1(1))			
+!$Zbcd.a1($a1.a1(1),$a1.a1(1))	-$Zbcd.a1($a1.a1(1),$a1.a1(1))	%$Zbcd.a1($a1.a1(1),$a1.a1(1))	
+
+
+!$abcd							-$abcd							%$abcd							
+!$Z0							-$Z0							%$Z0							
+!$Zbcd							-$Zbcd							%$Zbcd							
+!$a1.a1							-$a1.a1							%$a1.a1							
+!$abcd.abcd						-$abcd.abcd						%$abcd.abcd						
+!$Z0.Z0							-$Z0.Z0							%$Z0.Z0							
+!$Zbcd.Zbcd						-$Zbcd.Zbcd						%$Zbcd.Zbcd						
+!$Zbcd.a1()						-$Zbcd.a1()						%$Zbcd.a1()						
+!$Zbcd.a1(1)					-$Zbcd.a1(1)					%$Zbcd.a1(1)					
+!$Zbcd.a1($a1)					-$Zbcd.a1($a1)					%$Zbcd.a1($a1)					
+!$Zbcd.a1($a1.a1)				-$Zbcd.a1($a1.a1)				%$Zbcd.a1($a1.a1)				
+!$Zbcd.a1($a1.a1(1))			-$Zbcd.a1($a1.a1(1))			%$Zbcd.a1($a1.a1(1))			
+!$Zbcd.a1($a1.a1(1),$a1.a1(1))	-$Zbcd.a1($a1.a1(1),$a1.a1(1))	%$Zbcd.a1($a1.a1(1),$a1.a1(1))	
+
+$abcd							< $abcd							-$abcd							%$abcd							
+$Z0								> $Z0							-$Z0							%$Z0							
+$Zbcd							<=$Zbcd							-$Zbcd							%$Zbcd							
+$a1.a1							>=$a1.a1						-$a1.a1							%$a1.a1							
+$abcd.abcd						< $abcd.abcd					-$abcd.abcd						%$abcd.abcd						
+$Z0.Z0							> $Z0.Z0						-$Z0.Z0							%$Z0.Z0							
+$Zbcd.Zbcd						<=$Zbcd.Zbcd					-$Zbcd.Zbcd						%$Zbcd.Zbcd						
+$Zbcd.a1()						>=$Zbcd.a1()					-$Zbcd.a1()						%$Zbcd.a1()						
+$Zbcd.a1(1)						< $Zbcd.a1(1)					-$Zbcd.a1(1)					%$Zbcd.a1(1)					
+$Zbcd.a1($a1)					> $Zbcd.a1($a1)					-$Zbcd.a1($a1)					%$Zbcd.a1($a1)					
+$Zbcd.a1($a1.a1)				<=$Zbcd.a1($a1.a1)				-$Zbcd.a1($a1.a1)				%$Zbcd.a1($a1.a1)				
+$Zbcd.a1($a1.a1(1))				>=$Zbcd.a1($a1.a1(1))			-$Zbcd.a1($a1.a1(1))			%$Zbcd.a1($a1.a1(1))			
+$Zbcd.a1($a1.a1(1),$a1.a1(1))	>=$Zbcd.a1($a1.a1(1),$a1.a1(1))	-$Zbcd.a1($a1.a1(1),$a1.a1(1))	%$Zbcd.a1($a1.a1(1),$a1.a1(1))	
+
+$abcd							==$abcd							< $abcd							-$abcd							%$abcd							
+$Z0								!=$Z0								> $Z0							-$Z0							%$Z0							
+$Zbcd							==$Zbcd							<=$Zbcd							-$Zbcd							%$Zbcd							
+$a1.a1							!=$a1.a1							>=$a1.a1						-$a1.a1							%$a1.a1							
+$abcd.abcd						==$abcd.abcd						< $abcd.abcd					-$abcd.abcd						%$abcd.abcd						
+$Z0.Z0							!=$Z0.Z0							> $Z0.Z0						-$Z0.Z0							%$Z0.Z0							##"abcdfegthl"
+$Zbcd.Zbcd						==$Zbcd.Zbcd						<=$Zbcd.Zbcd					-$Zbcd.Zbcd						%$Zbcd.Zbcd						##"\n"
+$Zbcd.a1()						!=$Zbcd.a1()						>=$Zbcd.a1()					-$Zbcd.a1()						%$Zbcd.a1()						##0.9
+$Zbcd.a1(1)						==$Zbcd.a1(1)						< $Zbcd.a1(1)					-$Zbcd.a1(1)					%$Zbcd.a1(1)					##10001
+$Zbcd.a1($a1)					!=$Zbcd.a1($a1)					> $Zbcd.a1($a1)					-$Zbcd.a1($a1)					%$Zbcd.a1($a1)					##true
+$Zbcd.a1($a1.a1)				==$Zbcd.a1($a1.a1)				<=$Zbcd.a1($a1.a1)				-$Zbcd.a1($a1.a1)				%$Zbcd.a1($a1.a1)				##false
+$Zbcd.a1($a1.a1(1))				!=$Zbcd.a1($a1.a1(1))				>=$Zbcd.a1($a1.a1(1))			-$Zbcd.a1($a1.a1(1))			%$Zbcd.a1($a1.a1(1))			##null
+$Zbcd.a1($a1.a1(1),$a1.a1(1))	==$Zbcd.a1($a1.a1(1),$a1.a1(1))	>=$Zbcd.a1($a1.a1(1),$a1.a1(1))	-$Zbcd.a1($a1.a1(1),$a1.a1(1))	%$Zbcd.a1($a1.a1(1),$a1.a1(1))	##trueA
+
+$abcd							&&	$abcd							==$abcd							< $abcd							-$abcd							%$abcd							
+$Z0								&&	$Z0								!=$Z0								> $Z0							-$Z0							%$Z0							
+$Zbcd							&&	$Zbcd							==$Zbcd							<=$Zbcd							-$Zbcd							%$Zbcd							
+$a1.a1							&&	$a1.a1							!=$a1.a1							>=$a1.a1						-$a1.a1							%$a1.a1							
+$abcd.abcd						&&	$abcd.abcd						==$abcd.abcd						< $abcd.abcd					-$abcd.abcd						%$abcd.abcd						
+$Z0.Z0							&&	$Z0.Z0							!=$Z0.Z0							> $Z0.Z0						-$Z0.Z0							%$Z0.Z0							##"abcdfegthl"
+$Zbcd.Zbcd						&&	$Zbcd.Zbcd						==$Zbcd.Zbcd						<=$Zbcd.Zbcd					-$Zbcd.Zbcd						%$Zbcd.Zbcd						##"\n"
+$Zbcd.a1()						&&	$Zbcd.a1()						!=$Zbcd.a1()						>=$Zbcd.a1()					-$Zbcd.a1()						%$Zbcd.a1()						##0.9
+$Zbcd.a1(1)						&&	$Zbcd.a1(1)						==$Zbcd.a1(1)						< $Zbcd.a1(1)					-$Zbcd.a1(1)					%$Zbcd.a1(1)					##10001
+$Zbcd.a1($a1)					&&	$Zbcd.a1($a1)					!=$Zbcd.a1($a1)					> $Zbcd.a1($a1)					-$Zbcd.a1($a1)					%$Zbcd.a1($a1)					##true
+$Zbcd.a1($a1.a1)				&&	$Zbcd.a1($a1.a1)				==$Zbcd.a1($a1.a1)				<=$Zbcd.a1($a1.a1)				-$Zbcd.a1($a1.a1)				%$Zbcd.a1($a1.a1)				##false
+$Zbcd.a1($a1.a1(1))				&&	$Zbcd.a1($a1.a1(1))				!=$Zbcd.a1($a1.a1(1))				>=$Zbcd.a1($a1.a1(1))			-$Zbcd.a1($a1.a1(1))			%$Zbcd.a1($a1.a1(1))			##null
+$Zbcd.a1($a1.a1(1),$a1.a1(1))	&&	$Zbcd.a1($a1.a1(1),$a1.a1(1))	==$Zbcd.a1($a1.a1(1),$a1.a1(1))	>=$Zbcd.a1($a1.a1(1),$a1.a1(1))	-$Zbcd.a1($a1.a1(1),$a1.a1(1))	%$Zbcd.a1($a1.a1(1),$a1.a1(1))	##trueA
+
+$abcd							||	$abcd							==$abcd							< $abcd							-$abcd							%$abcd							
+$Z0								||	$Z0								!=$Z0								> $Z0							-$Z0							%$Z0							
+$Zbcd							||	$Zbcd							==$Zbcd							<=$Zbcd							-$Zbcd							%$Zbcd							
+$a1.a1							||	$a1.a1							!=$a1.a1							>=$a1.a1						-$a1.a1							%$a1.a1							
+$abcd.abcd						||	$abcd.abcd						==$abcd.abcd						< $abcd.abcd					-$abcd.abcd						%$abcd.abcd						
+$Z0.Z0							||	$Z0.Z0							!=$Z0.Z0							> $Z0.Z0						-$Z0.Z0							%$Z0.Z0							##"abcdfegthl"
+$Zbcd.Zbcd						||	$Zbcd.Zbcd						==$Zbcd.Zbcd						<=$Zbcd.Zbcd					-$Zbcd.Zbcd						%$Zbcd.Zbcd						##"\n"
+$Zbcd.a1()						||	$Zbcd.a1()						!=$Zbcd.a1()						>=$Zbcd.a1()					-$Zbcd.a1()						%$Zbcd.a1()						##0.9
+$Zbcd.a1(1)						||	$Zbcd.a1(1)						==$Zbcd.a1(1)						< $Zbcd.a1(1)					-$Zbcd.a1(1)					%$Zbcd.a1(1)					##10001
+$Zbcd.a1($a1)					||	$Zbcd.a1($a1)					!=$Zbcd.a1($a1)					> $Zbcd.a1($a1)					-$Zbcd.a1($a1)					%$Zbcd.a1($a1)					##true
+$Zbcd.a1($a1.a1)				||	$Zbcd.a1($a1.a1)				==$Zbcd.a1($a1.a1)				<=$Zbcd.a1($a1.a1)				-$Zbcd.a1($a1.a1)				%$Zbcd.a1($a1.a1)				##false
+$Zbcd.a1($a1.a1(1))				||	$Zbcd.a1($a1.a1(1))				!=$Zbcd.a1($a1.a1(1))				>=$Zbcd.a1($a1.a1(1))			-$Zbcd.a1($a1.a1(1))			%$Zbcd.a1($a1.a1(1))			##null
+$Zbcd.a1($a1.a1(1),$a1.a1(1))	||	$Zbcd.a1($a1.a1(1),$a1.a1(1))	==$Zbcd.a1($a1.a1(1),$a1.a1(1))	>=$Zbcd.a1($a1.a1(1),$a1.a1(1))	-$Zbcd.a1($a1.a1(1),$a1.a1(1))	%$Zbcd.a1($a1.a1(1),$a1.a1(1))	##trueA
+
+
+
+
+
+$abcd							==$abcd							< $abcd								-$abcd							%$abcd							||	$abcd							
+$Z0								!=$Z0								> $Z0							-$Z0							%$Z0							||	$Z0								
+$Zbcd							==$Zbcd							<=$Zbcd								-$Zbcd							%$Zbcd							||	$Zbcd							
+$a1.a1							!=$a1.a1							>=$a1.a1						-$a1.a1							%$a1.a1							||	$a1.a1							
+$abcd.abcd						==$abcd.abcd						< $abcd.abcd					-$abcd.abcd						%$abcd.abcd						||	$abcd.abcd						
+$Z0.Z0							!=$Z0.Z0							> $Z0.Z0						-$Z0.Z0							%$Z0.Z0							||	$Z0.Z0							
+$Zbcd.Zbcd						==$Zbcd.Zbcd						<=$Zbcd.Zbcd					-$Zbcd.Zbcd						%$Zbcd.Zbcd						||	$Zbcd.Zbcd						
+$Zbcd.a1()						!=$Zbcd.a1()						>=$Zbcd.a1()					-$Zbcd.a1()						%$Zbcd.a1()						||	$Zbcd.a1()						
+$Zbcd.a1(1)						==$Zbcd.a1(1)						< $Zbcd.a1(1)					-$Zbcd.a1(1)					%$Zbcd.a1(1)					||	$Zbcd.a1(1)						
+$Zbcd.a1($a1)					!=$Zbcd.a1($a1)					> $Zbcd.a1($a1)						-$Zbcd.a1($a1)					%$Zbcd.a1($a1)					||	$Zbcd.a1($a1)					
+$Zbcd.a1($a1.a1)				==$Zbcd.a1($a1.a1)				<=$Zbcd.a1($a1.a1)					-$Zbcd.a1($a1.a1)				%$Zbcd.a1($a1.a1)				||	$Zbcd.a1($a1.a1)				
+$Zbcd.a1($a1.a1(1))				!=$Zbcd.a1($a1.a1(1))				>=$Zbcd.a1($a1.a1(1))			-$Zbcd.a1($a1.a1(1))			%$Zbcd.a1($a1.a1(1))			||	$Zbcd.a1($a1.a1(1))				
+$Zbcd.a1($a1.a1(1),$a1.a1(1))	==$Zbcd.a1($a1.a1(1),$a1.a1(1))	>=$Zbcd.a1($a1.a1(1),$a1.a1(1))		-$Zbcd.a1($a1.a1(1),$a1.a1(1))	%$Zbcd.a1($a1.a1(1),$a1.a1(1))	||	$Zbcd.a1($a1.a1(1),$a1.a1(1))	
+
+##"abcdfegthl"
+##"\n"
+##0.9
+##10001
+##true
+##false
+##null
+##trueA
+
+#end
+
+#else 1
+
+#if ( $abcd!=$abcd ) 1 #else 1
+
+#if ( $abcd!=$abcd ) 1 
+#elseif ( $abcd!=$abcd ) 2
+#elseif ( $abcd==$abcd ) 3
+#else 3
+
+#foreach $abcd  in $Zbcd.a1($a1.a1(1),$a1.a1(1)) 9
+
+#set $abcd  = $Zbcd.a1($a1.a1(1),$a1.a1(1))
+
+#param	$_abcd_ = "aaaaaaaaaa"
+#stop

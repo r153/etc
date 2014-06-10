@@ -1,0 +1,5 @@
+#begin
+$aaa=$Zbcd.a1("aaaaaa")
+$aaa=$Zbcd.a1(123456)
+$aaa=$Zbcd.a1(1.234567)
+#end

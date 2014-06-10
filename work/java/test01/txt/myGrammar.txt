@@ -1,0 +1,173 @@
+//   Input   = Space (StFore / Print) ;
+//   Store   = Name Space Equ Sum !_ {store} ;
+//   Print   = Sum !_ {print} ;
+//   Sum     = Sign Product (AddOp Product)* {sum} ;
+//   Product = Factor (MultOp Factor)* {product} ;
+//   Factor  = Digits? "." Digits Space {fraction}
+//           / Digits Space {integer}
+//           / Lparen Sum Rparen {unwrap} 
+//           / Name Space {retrieve} ; 
+//   Sign    = ("-" Space)? ;
+//   AddOp   = [-+]  Space <+ or -> ;
+//   MultOp  = [*/]? Space <* or /> ;
+//   Lparen  = "("   Space <(> ;
+//   Rparen  = ")"   Space <)> ;
+//   Equ     = "="   Space <=> ;
+//   Digits  = [0-9]+ ;
+//   Name    = [a-z]+ ;
+//   Space   = " "* {space} ;
+
+
+main		=	(Statement)+ !_ ;
+
+Statement	=	(Text				//<statement>::=   <text>
+				/ Block				//        | <block>
+				/ IfStatement		//        | <if-statement>
+				/ ElseIfStatement	//        | <else-if-statement>
+				/ ForeachStatement	//        | <foreach-statement>
+				/ SetStatement		//        | <set-statement>
+				/ ParamStatment		//        | <param-statment>
+				/ StopStatement		//        | <stop-statement>
+				/ Reference			//        | <reference>
+				) Spacing ;			
+
+Text						=(!"#" _ )+;														//TODO template sentense and {$AA} 
+Block						=BEGIN ( Expression )* END;											//<block>::= "#begin" { <expresion> } "#end"
+
+IfStatement					=IF LPAR Expression RPAR Statement ( ElseStatement )?;				//<if-statement>::= "#if" "(" <expresion> ")" <statement> [ <else-statement> ]
+ElseIfStatement				=ELSEIF LPAR Expression RPAR Statement ( ElseStatement )?;			//<else-if-statement>::= "#elseif" "(" <expresion> ")" <statement> [ <else-statement> ]
+ElseStatement				=ELSE Statement;													//<else-statement>::= "#else" <statement>
+
+ForeachStatement			=FOREACH Reference IN Reference Statement;							//<foreach-statement>::= "#foreach" <reference> "in" <reference> <statement>
+SetStatement				=SET Reference EQU Expression;										//<set>::= "#set" <reference> "=" <expression>
+StopStatement				=STOP;
+
+ParamStatment				=PARAM Reference EQU StringLiteral;									//param-statment>::= "#param" <reference> "=" <string-literal>
+
+
+
+Reference					=DOLLAR Identifier ( DOT ( Method / Identifier ) )*;				//<reference>::= "$" <identifier> { "." <method> | <identifier> }
+Method						=Identifier LPAR (Parameter ( COMMA Parameter )* )? RPAR;			//<method>::= <identifier> "(" [ <parameter> { "," <parameter> } ] ")"
+
+Parameter					=Reference / Literal;												//<parameter>::= <reference> | <literal>
+
+Expression					=TRUE/FALSE
+								/(PrimaryExpression (EQU PrimaryExpression)+)
+								/ ConditionalOrExpression;
+
+
+ConditionalOrExpression		=ConditionalAndExpression	(OROR ConditionalAndExpression)*;		//<conditional-or-expression>::= <conditional-and-expression>{ "||" <conditional-and-expression> }
+ConditionalAndExpression	=EqualityExpression			(ANDAND EqualityExpression)*;			//<conditional-and-expression>::= <equality-expression>{ "&&" <equality-expression> }
+
+EqualityExpression			=RelationalExpression		(EQUAL RelationalExpression				//<equality-expression>::= <relational-expression>{ "==" <relational-expression> 
+															/NOTEQUAL RelationalExpression)*;	//													| "!=" <relational-expression> }
+
+
+RelationalExpression		=AdditiveExpression			(LT AdditiveExpression				//<relational-expression>::= <additive-expression>{ "<"  <additive-expression>
+															/GT AdditiveExpression				//													| ">"  <additive-expression>
+															/LE AdditiveExpression				//													| "<=" <additive-expression>
+															/GE AdditiveExpression)*;			//													| ">=" <additive-expression>}
+
+
+AdditiveExpression			=MultiplicativeExpression	(PLUS MultiplicativeExpression			//additive-expression>::= <multiplicative-expression>{"+" <multiplicative-expression>
+															/MINUS MultiplicativeExpression)*;	//													| "-" <multiplicative-expression>}
+
+
+MultiplicativeExpression	=UnaryExpression			(STAR UnaryExpression					//<multiplicative-expression>::= <unary-expression>	{"*" <unary-expression>
+															/DIV UnaryExpression				//													| "/" <unary-expression>
+															/MOD UnaryExpression)*;				//													| "%" <unary-expression>}
+
+
+UnaryExpression				=BANG UnaryExpression/PrimaryExpression;							//<unary-expression>::= "!" <unary-expression> | <primary-expression>
+
+PrimaryExpression			=Literal/Reference;	///LPAR Expression RPAR;						//<primary-expression>::=<string-literal>|<number-literal>|<reference>|"(" <expression> ")"
+
+Identifier					= !Keyword Letter LetterOrDigit* Spacing;
+
+
+Letter						= [a-z] / [A-Z] / [_$] ;
+LetterOrDigit				= [a-z] / [A-Z] / [0-9] / [_$];
+
+Literal=(	StringLiteral { stringliteral }
+			/DecimalFloat { decimalfloat }
+			/DecimalNumeral { decimalnumeral }	
+			/TRUE	!LetterOrDigit { booleanliteral }
+			/FALSE	!LetterOrDigit { booleanliteral }
+			/NULL	!LetterOrDigit { nothing } )Spacing;
+
+
+DecimalFloat=DecimalNumeral "." [0-9]* ;
+
+DecimalNumeral= ( "0"/( [1-9] [0-9]* ));
+					
+
+StringLiteral= "\"" (Escape / !["\\\n\r] _)* "\"";
+
+Escape= "\\" ([btnfr"'\\] );
+
+Spacing=([ \t\r\n\u000C]+				// WhiteSpace
+			/ "##" (![\r\n] _)* [\r\n]	// EndOfLineComment
+		)*;
+
+
+BEGIN			=pBEGIN		Spacing;
+END				=pEND		Spacing;
+TRUE			=pTRUE		Spacing;
+FALSE			=pFALSE		Spacing;
+NULL			=pNULL		Spacing;
+IF				=pIF		Spacing;
+ELSE			=pELSE		Spacing;
+ELSEIF			=pELSEIF	Spacing;
+FOREACH			=pFOREACH	Spacing;
+IN				=pIN		Spacing;
+SET				=pSET		Spacing;
+STOP			=pSTOP		Spacing;
+PARAM			=pPARAM		Spacing;
+	
+LBRK			=	"["		Spacing;
+LPAR			=	"("		Spacing;
+LWING			=	"{"		Spacing;
+RBRK			=	"]"		Spacing;
+RPAR			=	")"		Spacing;
+RWING			=	"}"		Spacing;
+DOLLAR			=	"$"		Spacing;
+EQU				=	"="		Spacing;
+OROR			=	"||"	Spacing;
+ANDAND			=	"&&"	Spacing;
+EQUAL			=	"=="	Spacing;
+NOTEQUAL		=	"!="	Spacing;
+LT				=	"<"![=<]Spacing;
+GT				=	">"![=>]Spacing;
+LE				=	"<="	Spacing;
+GE				=	">="	Spacing;
+PLUS			=	"+"		Spacing;
+MINUS			=	"-"		Spacing;
+STAR			=	"*"		Spacing;
+DIV				=	"/"		Spacing;
+MOD				=	"%"		Spacing;
+BANG			=	"!"		Spacing;
+DOT				=	"."		Spacing;
+COMMA			=	","		Spacing;
+
+pBEGIN			="#begin"	;
+pEND			="#end"		;
+pTRUE			="#true"	;
+pFALSE			="#false"	;		
+pNULL			="#null"	;
+pIF				="#if"		;
+pELSE			="#else"	;
+pELSEIF			="#elseif"	;
+pFOREACH		="#foreach"	;
+pIN				="in"		;
+pSET			="#set"		;
+pSTOP			="#stop"	;
+pPARAM			="#param"	;
+
+Keyword=(pBEGIN	/pEND
+		/pTRUE/pFALSE/pNULL	
+		/pIF/pELSE/pELSEIF
+		/pFOREACH/pIN
+		/pSET/pPARAM
+		/pSTOP	
+		/ "#macro")!LetterOrDigit;
+
