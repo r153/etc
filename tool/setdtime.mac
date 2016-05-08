@@ -1,0 +1,5 @@
+﻿S_InsText('//');
+InsertDate();
+S_InsText(' ');
+InsertTime();
+S_InsText(' iida\n');
