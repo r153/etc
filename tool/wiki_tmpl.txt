@@ -70,3 +70,6 @@ RIGHT:右寄せ
 テキストに内部ページリンク　[[表示名>ページ名]]
 メニュー編集リンク　MENUEDIT:ここに好きなテキスト:MENUEDIT
 
+
+http://blog.kuborn.info/2013/01/redmine-wikitextile.html
+
